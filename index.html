@@ -24,16 +24,18 @@
         <header class="side" itemscope itemtype="http://schema.org/Person">
             
             
-            <img src="http://placekitten.com/260/260" alt="Javier Arques" itemprop="image">
+            <img src="img/avatar.jpg" alt="Javier Arques" itemprop="image">
 
-    
-            <h1 class="name">Javier Arques</h1>
-            <h2 class="sub">Front-end developer</h2>
+            <div class="site-title">
+                <h1 class="name">Javier <br>Arques</h1>
+                <h2 class="sub">Front-end developer</h2>             
+            </div>
+
 
             <!-- main-nav -->
             <nav>
                 <ul class="main-nav">
-                    <li><a href="">HOME</a></li>
+                    <li class="current"><a href="">HOME</a></li>
                     <li><a href="">PORTFOLIO</a></li>
                     <li><a href="">SOBRE MÍ</a></li>
                     <li><a href="">BLOG</a></li>
@@ -47,36 +49,27 @@
 
             <!-- footer -->
             <footer class="side-footer">
-                <ul>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">Linkedin</a></li>
-                    <li><a href="">Slideshare</a></li>
+                <ul class="social">
+                    <li><a href="#" title="Twitter">t</a></li>
+                    <li><a href="#" title="Linkedin">ln</a></li>
+                    <li><a href="#" title="Slideshare">s</a></li>
                 </ul>
+                <p class="legal">2013 © Javier Arques</p>
             </footer>
 
 
-        </header>
-        <!-- /header -->
+        </header><!-- END header -->
         
+        <!-- .main -->
         <main class="main">
-            <!-- .slider -->
-            <div class="slider">
-                <img src="http://placekitten.com/1200/460" alt="">
-            </div>
-            <!-- /.slider -->
+           <article class="home-wrapper">                
+                <header class="home-message">
+                    <h1 class="serif color-white">Hello!, I’m <strong>Javi Arques</strong>, <br>a passionate front-end developer</h1>
+                    <h2 class="sans-serif light color-dark-blue">You can learn more about me, see my last work or read my blog entries</h2>                  
+                </header>
 
-            <div class="portfolio-home">
-                <ul class="portfolio">
-                    <li><a href=""><img src="http://placekitten.com/260/260" alt=""></a></li>
-                    <li><a href=""><img src="http://placekitten.com/260/260" alt=""></a></li>
-                    <li><a href=""><img src="http://placekitten.com/260/260" alt=""></a></li>
-                    <li><a href=""><img src="http://placekitten.com/260/260" alt=""></a></li>
-                    <li><a href=""><img src="http://placekitten.com/260/260" alt=""></a></li>
-                    <li><a href=""><img src="http://placekitten.com/260/260" alt=""></a></li>
-                </ul>
-            </div>
-
-        </main>
+           </article> 
+        </main><!--END .main-->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>

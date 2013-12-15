@@ -2,13 +2,20 @@
    GOOGLE FONTS
    ========================================================================== */
 
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,700,700italic,900,900italic,400italic);
 
 
 
 /* ==========================================================================
-   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   MY RESET STYLES
    ========================================================================== */
+
+* { 
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
 
 html,
 button,
@@ -18,10 +25,15 @@ textarea {
     color: #2C3E50;
 }
 
+html, body{
+    height: 100%;
+}
+
 body {
     font-size: 1em;
     line-height: 1.4;
-    font-family: Raleway, Arial, sans-serif;
+    font-weight: 300;
+    font-family: Lato, Arial, sans-serif;
 }
 
 ::-moz-selection {
@@ -67,14 +79,44 @@ textarea {
     padding: 0.2em 0;
 }
 
+/* 
+   Typography
+   ========================================================================== */
 
+h1, h2, h3, h4, h5, h6{
+    font-family: Merriweather, Georgia, serif;
+    margin: 0 0 1em 0;
+    font-weight: 400;
+}
+
+/* Helpers font family & weight */
+
+.serif{
+    font-family: Merriweather, Georgia, serif;
+}
+.sans-serif{
+    font-family: Lato, Arial, sans-serif;
+}
+.light{
+    font-weight: 300;
+}
+.normal{
+    font-weight: 400;
+}
+
+/* General colors */
+
+.color-white{color: #FFF}
+.color-red{ color: #CC3333;}
+.color-blue{ color : #7EBBD8;}
+.color-dark-blue{ color: #2F3F4F;}
+.color-gray{ color: #D7DADB;}
 
 
 
 /* ==========================================================================
    LAYOUT
    ========================================================================== */
-
 
 .side{
     background: #f3f3f3;
@@ -83,13 +125,12 @@ textarea {
     float: left;
     height: 100%;
     z-index: 999;
-    position: absolute;
     position: fixed;
     left: 0;
 }
 .main{
     padding-left: 260px;
-    background: red;
+    background: green;
     height: 100%;
 }
 
@@ -97,14 +138,134 @@ textarea {
    SIDE NAV MENU
    ========================================================================== */
 
+/* 
+   Main navegation
+   ========================================================================== */
 
-.side-footer{
+.main-nav{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: .875em;
+}
+.main-nav li{
+    display: block;
+}
+.main-nav li a{
+    text-decoration: none;
+    padding: 1em 2em;
+    display: block;
+    color: #2C3E50;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+}
+.main-nav li.current a{
+    background-color: #FFF;
+}
+.main-nav li.current a::before{
+    content: '';
+    width: 10px;
+    height: 100%;
+    background-color: #CC3333;
     position: absolute;
-    bottom: 0;
+    left:0;
+    top: 0;
 }
 
 
 
+/* 
+   Site title box
+   ========================================================================== */
+
+.site-title{
+    background: #FFF;
+    width: 160px;
+    height: 160px;
+    padding: 1.25em;
+    text-align: center;
+    margin: -25px auto 25px auto;
+    position: relative;
+    z-index: 1;
+}
+.site-title .name{
+    font-size: 1.7em;
+    color: #CC3333;
+    font-weight: 600;
+    margin-bottom: .5em;
+}
+.site-title .name:first-line{
+    color: #2C3E50;
+    font-size: .75em;
+}
+.site-title .sub{
+    font-family: Lato;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #666;
+}
+
+
+/* 
+   Footer
+   ========================================================================== */
+
+.side-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #CC3333;
+    text-align: center;
+    color: #FFF;
+    padding: 1em;
+}
+
+.social{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.social li{
+    padding: 0;
+    display: inline-block;
+}
+.social a{    
+    width: 2em;
+    height: 2em;
+    display: block;
+
+    font-size: 1.2em;
+    line-height: 2em;
+    font-style: italic;
+    color: #FFF;
+    text-decoration: none;
+    border: 2px solid #FFF;
+    font-family: Merriweather, Georgia, serif;
+    
+}
+
+
+
+/* ==========================================================================
+   HOME
+   ========================================================================== */
+
+.home-wrapper{
+    height: 100%;
+    background-image: url(../img/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.home-message{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    width: 50%;
+}
 
 
 
